@@ -1,0 +1,124 @@
+/* Add the theme css/less here. You can either provide pure CSS or LESS(see https://lesscss.org/#overview) for themes.
+Dark Theme: In package.json set the theme.dark property to true if your theme is dark, else false.
+
+
+https://github.com/phcode-dev/phoenix/blob/main/src/extensions/default/DarkTheme/main.less
+Refer the above link for the default dark theme less CSS Example
+
+Below is only a subset of css styles that can be changed.
+See detailed docs in https://github.com/phcode-dev/phoenix/wiki/How-To-Write-Extensions-And-Themes
+*/
+
+@base: #faf4ed; //default background
+@surface: #fffaf3;
+@overlay: #f2e9e1;
+@muted: #9893a5;
+@subtle: #797593;
+@text: #575279; //default foreground
+@love: #b4637a;
+@gold: #ea9d34;
+@rose: #d7827e;
+@pine: #286983;
+@foam: #56949f;
+@iris: #907aa9;
+@highlight-low: #f4ede8;
+@highlight-med: #dfdad9;
+@highlight-high: #cecacd;
+
+.cm-atom, .cm-string, .cm-hr {color: @gold;}
+.cm-string-2, .cm-hr {color: @gold;}
+.cm-number, .cm-attribute, .cm-plus {color: @subtle;}
+//.cm-def {color: @accent-def;}
+.cm-property {color: @iris;}
+.cm-variable, .cm-variable-2, .cm-variable-3 {color: @text;}
+//.cm-variable-2 {color: @accent-variable-2;}
+//.cm-variable-3 {color: @accent-variable-3;}
+.cm-operator, .cm-bracket, .cm-minus {color: @text;}
+.cm-meta {color: @foam;}
+.cm-comment {color: @muted;}
+//.cm-minus {color: #dc322f;}
+.cm-header {color: @love;}
+.cm-link {color: @iris; text-decoration: none;}
+.cm-rangeinfo {color: @rose;}
+.cm-keyword, .cm-qualifier {color: @pine;}
+.cm-builtin, .cm-error {color: @love;}
+.cm-tag {color: @foam;}
+
+
+
+/* default background and foreground*/
+.CodeMirror,
+.CodeMirror .CodeMirror-scroll {
+	background: @base;
+	color: @text;
+}
+
+.CodeMirror-cursor {
+	border-left: 2px solid @text !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid @text !important;
+    border-left: none !important;
+}
+
+.CodeMirror-gutters {
+	background: @base;
+	border-right: 0;
+}
+
+.CodeMirror-linenumber {
+	color: @muted;
+}
+
+/* selection of code */
+.CodeMirror-selected {
+	background: @highlight-med;
+}
+.CodeMirror .CodeMirror-selected {
+    background: @highlight-med;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: @highlight-med;
+}
+/* Matching */
+
+.CodeMirror-matchingbracket {
+    background: @rose;
+    color: @base !important;
+}
+
+.CodeMirror-matchingtag {
+    background: @foam !important;
+	border-bottom: 3px solid rgb(82, 183, 136, 0.7) !important;
+}
+
+/* Active Line */
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-nonmatchingbracket {
+	color: @love !important;
+}
+
+.CodeMirror-activeline-background {
+	background: @highlight-low !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+
+	background-color: @highlight-low !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
+	color: @highlight-low;
+}
+
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+    background-color: @base;
+}
+
+#image-holder {
+    color: @overlay;
+}
