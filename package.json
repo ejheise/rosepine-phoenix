@@ -1,11 +1,11 @@
 {
-    "title": "rosepine-theme",
-    "name": "gh-ejheise-rosepine-theme",
-    "description": "Rose Pine Dawn/Moon for Phoenix Code",
+    "title": "rosepine-phoenix",
+    "name": "gh-ejheise-rosepine-phoenix",
+    "description": "Rose Pine for Phoenix Code",
     "version": "0.0.1",
     "license": "unknown",
     "author": "ejheise",
-    "homepage": "https://github.com/ejheise/rosepine-theme",
+    "homepage": "https://github.com/ejheise/rosepine-phoenix",
     "engines": {
         "brackets": ">=2.0.0"
     },
@@ -16,7 +16,7 @@
         "demo"
     ],
     "theme": {
-        "file": "rosepine-dawn.less",
-        "dark": false
+        "file": "rosepine.less",
+        "dark": true
     }
 }
