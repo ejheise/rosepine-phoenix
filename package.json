@@ -16,7 +16,7 @@
         "demo"
     ],
     "theme": {
-        "file": "my-theme.less",
-        "dark": true
+        "file": "rosepine-dawn.less",
+        "dark": false
     }
 }
